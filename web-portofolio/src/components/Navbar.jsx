@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Star } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
 
 export default function Navbar() {
@@ -21,12 +21,13 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between h-[84px]">
-        {/* Brand */}
+        {/* Brand with light olive green star icon (larger size & vertically centered) */}
         <a
           href="#home"
-          className="text-[21px] sm:text-[22px] font-extrabold tracking-[0.08em] text-[#1a321a] hover:opacity-70 transition-opacity"
+          className="inline-flex items-center gap-2.5 text-[21px] sm:text-[22px] font-extrabold tracking-[0.08em] text-[#1a321a] hover:opacity-70 transition-opacity leading-none"
         >
-          {portfolioData.personal.shortName}
+          <Star size={23} className="fill-[#6A8A50] text-[#6A8A50] flex-shrink-0 self-center" />
+          <span className="leading-none">{portfolioData.personal.shortName}</span>
         </a>
 
         {/* Desktop nav links (visible on lg: 1024px and up) */}

@@ -35,7 +35,7 @@ export default function ProjectModal({ project, onClose }) {
           </button>
 
           <div className="flex flex-wrap gap-1.5 mb-3">
-            <span className="inline-flex items-center justify-center h-[26px] px-3.5 rounded-full text-[12px] font-bold leading-none bg-[#3A5A40] text-white hover:bg-white hover:text-[#3A5A40] border border-transparent hover:border-[#3A5A40]/30 transition-all duration-300 cursor-pointer">
+            <span className="inline-flex items-center justify-center h-[26px] px-3.5 rounded-full text-[12px] font-bold leading-none bg-[#3A5A40] text-white shadow-sm">
               {project.category}
             </span>
             {project.tags.map((tag, idx) => (

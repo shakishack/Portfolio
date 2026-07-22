@@ -11,10 +11,12 @@ export const portfolioData = {
     opportunitiesRoles: ["UI/UX Design", "Frontend", "Software Development"],
     opportunitiesSuffix: "Opportunities",
     tagline: [
-      "My name is Shakila Ardelina. Tech enthusiast with a passion for UI/UX Design and Frontend Development. Come get to know more about me and my work!",
+      "My name is Shakila Ardelina. Tech enthusiast with a passion for UI/UX Design and Frontend Development. Come get to know more about me and my work ;)",
     ],
     email: "shakila.ardelina@gmail.com",
     whatsappUrl: "https://wa.me/6281234567890",
+    cvUrl: "#",
+    portfolioPdfUrl: "#",
     githubUrl: "https://github.com/",
     linkedinUrl: "https://linkedin.com/",
     instagramUrl: "https://instagram.com/",
@@ -75,7 +77,7 @@ export const portfolioData = {
     {
       id: 1,
       category: "Web",
-      image: "/img/projects/siera.png",
+      image: "/img/siera-stakeholder.png",
       title: "SIERA",
       subtitle: "UI/UX Designer",
       tags: ["Figma", "UI"],
@@ -86,7 +88,7 @@ export const portfolioData = {
     {
       id: 2,
       category: "Web",
-      image: "/img/projects/pojok-teduh.png",
+      image: "/img/pojok-teduh.png",
       title: "Pojok Teduh",
       subtitle: "Frontend Developer",
       tags: ["Next.js", "React", "Tailwind CSS"],
@@ -99,7 +101,7 @@ export const portfolioData = {
     {
       id: 3,
       category: "Mobile UI",
-      image: "/img/projects/elmora.png",
+      image: "/img/elmora.png",
       title: "ELMORA",
       subtitle: "UI/UX Designer",
       tags: ["Figma", "UI", "UX", "Maze"],
@@ -109,7 +111,7 @@ export const portfolioData = {
     {
       id: 4,
       category: "Web",
-      image: "/img/projects/midoka-matcha.png",
+      image: "/img/midoka.png",
       title: "Midoka Matcha",
       subtitle: "Frontend Developer",
       tags: ["HTML5", "CSS3", "JavaScript"],
@@ -120,7 +122,7 @@ export const portfolioData = {
     {
       id: 5,
       category: "Mobile UI",
-      image: "/img/projects/foundit.png",
+      image: "/img/foundit.png",
       title: "Foundit",
       subtitle: "UI/UX Designer",
       tags: ["Figma", "UI"],
@@ -130,7 +132,7 @@ export const portfolioData = {
     {
       id: 6,
       category: "Mobile UI",
-      image: "/img/projects/maxim.png",
+      image: "/img/maxim.png",
       title: "Maxim",
       subtitle: "UI/UX Designer",
       tags: ["Figma", "UI", "Heuristic"],

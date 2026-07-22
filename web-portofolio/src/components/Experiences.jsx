@@ -21,9 +21,7 @@ export default function Experiences() {
           {portfolioData.experiences.map((exp) => (
             <div key={exp.id} className="relative text-left group">
               {/* Timeline dot — turns to bright light green with glow & scale on hover */}
-              <div
-                className="absolute -left-7 top-[24px] w-[15px] h-[15px] rounded-full border-2 border-white z-10 shadow-sm bg-[#4A7A50] group-hover:bg-[#52C46C] group-hover:scale-125 group-hover:shadow-[0_0_12px_rgba(82,196,108,0.8)] transition-all duration-300"
-              />
+              <div className="absolute -left-7 top-[24px] w-[15px] h-[15px] rounded-full border-2 border-white z-10 shadow-sm bg-[#4A7A50] group-hover:bg-[#52C46C] group-hover:scale-125 group-hover:shadow-[0_0_12px_rgba(82,196,108,0.8)] transition-all duration-300" />
 
               {/* Row — no card by default, white card on hover */}
               <div className="rounded-[14px] px-6 py-5 border border-transparent transition-all duration-300 group-hover:bg-white/80 group-hover:border-white group-hover:shadow-[0_4px_24px_-6px_rgba(26,50,26,0.12)] backdrop-blur-sm">
@@ -31,7 +29,7 @@ export default function Experiences() {
                   <h3 className="text-[15.5px] sm:text-[16.5px] font-bold text-[#1a321a] uppercase tracking-[0.03em] leading-snug group-hover:text-[#2E6B38] transition-colors duration-300">
                     {exp.role}
                   </h3>
-                  <span className="text-[14px] text-[#5A7A5C] font-medium whitespace-nowrap flex-shrink-0 sm:ml-6 group-hover:text-[#388E3C] transition-colors duration-300">
+                  <span className="text-[14px] text-[#1a321a] font-medium whitespace-nowrap flex-shrink-0 sm:ml-6 group-hover:text-[#388E3C] transition-colors duration-300">
                     {exp.period}
                   </span>
                 </div>
