@@ -15,6 +15,7 @@ export const portfolioData = {
       "Come get to know Me :)",
     ],
     email: "shakila.ardelina@gmail.com",
+    whatsappUrl: "https://wa.me/6281234567890",
     githubUrl: "https://github.com/",
     linkedinUrl: "https://linkedin.com/",
     instagramUrl: "https://instagram.com/",

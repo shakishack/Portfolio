@@ -1,6 +1,6 @@
 import React from "react";
 import { Mail } from "lucide-react";
-import { GithubIcon, LinkedinIcon, InstagramIcon } from "./Icons";
+import { GithubIcon, LinkedinIcon, InstagramIcon, WhatsappIcon } from "./Icons";
 import { portfolioData } from "../data/portfolioData";
 
 export default function Footer() {
@@ -82,6 +82,15 @@ export default function Footer() {
                 className="w-10 h-10 rounded-full border border-[#5A8A5A] hover:border-white hover:bg-white/10 flex items-center justify-center text-white transition-all duration-200"
               >
                 <InstagramIcon size={16} />
+              </a>
+              <a
+                href={personal.whatsappUrl || "https://wa.me/"}
+                target="_blank"
+                rel="noreferrer"
+                aria-label="WhatsApp"
+                className="w-10 h-10 rounded-full border border-[#5A8A5A] hover:border-white hover:bg-white/10 flex items-center justify-center text-white transition-all duration-200"
+              >
+                <WhatsappIcon size={16} />
               </a>
               <a
                 href={`mailto:${personal.email}`}
