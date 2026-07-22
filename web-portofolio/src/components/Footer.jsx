@@ -23,7 +23,6 @@ export default function Footer() {
       {/* ── Top block ───────────────────────────────────────── */}
       <div className="max-w-5xl mx-auto px-6 pt-12 pb-9">
         <div className="flex flex-col md:flex-row md:items-start justify-between gap-10">
-
           {/* LEFT: brand + tagline */}
           <div className="flex flex-col gap-3 max-w-sm">
             <a
@@ -101,21 +100,14 @@ export default function Footer() {
               </a>
             </div>
           </div>
-
         </div>
       </div>
 
       {/* ── Bottom bar ──────────────────────────────────────── */}
       <div className="max-w-5xl mx-auto px-6 border-t border-white/15 py-4 flex flex-col sm:flex-row items-center justify-between gap-2">
-        <p className="text-[12.5px] text-[#6A9A6A]">
+        <p className="text-[13.5px] text-[#8FB88F]">
           © {new Date().getFullYear()} {personal.name}. All rights reserved.
         </p>
-        <a
-          href={`mailto:${personal.email}`}
-          className="text-[12.5px] text-[#6A9A6A] hover:text-white transition-colors"
-        >
-          {personal.email}
-        </a>
       </div>
     </footer>
   );
