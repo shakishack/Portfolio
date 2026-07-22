@@ -1,0 +1,53 @@
+import React from "react";
+import { portfolioData } from "../data/portfolioData";
+
+export default function Experiences() {
+  return (
+    <section
+      id="experiences"
+      className="experiences-section pt-16 pb-24 lg:pt-20 lg:pb-32 px-6 relative overflow-hidden"
+    >
+      {/* Left side gradient glow */}
+      <div className="experiences-glow-left" aria-hidden="true" />
+      {/* Right side gradient glow */}
+      <div className="experiences-glow-right" aria-hidden="true" />
+
+      <div className="max-w-5xl mx-auto relative z-10">
+        <h2 className="section-title text-center mb-10 lg:mb-14">
+          Experiences
+        </h2>
+
+        <div className="timeline-wrap pl-7 space-y-2">
+          {portfolioData.experiences.map((exp) => (
+            <div key={exp.id} className="relative text-left group">
+              {/* Timeline dot — turns to bright light green with glow & scale on hover */}
+              <div
+                className="absolute -left-7 top-[22px] w-[14px] h-[14px] rounded-full border-2 border-white z-10 shadow-sm bg-[#4A7A50] group-hover:bg-[#52C46C] group-hover:scale-125 group-hover:shadow-[0_0_12px_rgba(82,196,108,0.8)] transition-all duration-300"
+              />
+
+              {/* Row — no card by default, white card on hover */}
+              <div className="rounded-[14px] px-6 py-5 border border-transparent transition-all duration-300 group-hover:bg-white/80 group-hover:border-white group-hover:shadow-[0_4px_24px_-6px_rgba(26,50,26,0.12)] backdrop-blur-sm">
+                <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-1">
+                  <h3 className="text-[13.5px] font-bold text-[#1a321a] uppercase tracking-[0.04em] leading-snug group-hover:text-[#2E6B38] transition-colors duration-300">
+                    {exp.role}
+                  </h3>
+                  <span className="text-[13px] text-[#5A7A5C] font-normal whitespace-nowrap flex-shrink-0 sm:ml-6 group-hover:text-[#388E3C] transition-colors duration-300">
+                    {exp.period}
+                  </span>
+                </div>
+
+                <p className="text-[13px] font-semibold text-[#4A7050] mb-2 group-hover:text-[#2E6B38] transition-colors duration-300">
+                  {exp.organization}
+                </p>
+
+                <p className="text-[13px] text-[#2A4A2A] leading-relaxed font-normal">
+                  {exp.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

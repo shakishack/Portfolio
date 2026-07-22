@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Kulim+Park:wght@200;300;400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: "Kulim Park", sans-serif;
+}
+
+body {
+  background-color: #eff8ef;
+  color: #1a321a;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+a,
+li,
+button {
+  font-family: "Kulim Park", sans-serif;
+}
+
+section[id] {
+  scroll-margin-top: 84px;
+}
+
+::selection {
+  background: #3a5a40;
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #dcf0dc;
+}
+::-webkit-scrollbar-thumb {
+  background: #7fa87f;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #3a5a40;
+}
+
+.hero-bg {
+  background: linear-gradient(
+    180deg,
+    #cfe4c8 0%,
+    #d9ecd1 25%,
+    #e7f3de 50%,
+    #f4faef 75%,
+    #ffffff 100%
+  );
+}
+
+.section-tint {
+  background: linear-gradient(180deg, #eaf3e2 0%, #f2f8ed 100%);
+}
+
+/* Gradient bridge: putih → section-tint, sangat smooth */
+.section-bridge-top {
+  height: 220px;
+  background: linear-gradient(
+    180deg,
+    #ffffff  0%,
+    #ffffff  15%,
+    #f9fdf6  35%,
+    #f4faf0  55%,
+    #eef6e8  75%,
+    #eaf3e2 100%
+  );
+}
+
+.skills-bg {
+  background: linear-gradient(
+    180deg,
+    #d2e9c3 0%,
+    #dcefc6 25%,
+    #e7f4ce 50%,
+    #f0f8d6 75%,
+    #f8fbe4 100%
+  );
+}
+
+.timeline-wrap {
+  position: relative;
+}
+.timeline-wrap::before {
+  content: "";
+  position: absolute;
+  left: 7px;
+  top: 6px;
+  bottom: 6px;
+  width: 2px;
+  background: #3a5a40;
+  opacity: 0.3;
+}
+
+/* ── Experiences section: light greenish base */
+.experiences-section {
+  background: linear-gradient(180deg, #f0f7eb 0%, #f7fbf3 50%, #eef6e8 100%);
+}
+
+/* Side gradient glows — left */
+.experiences-glow-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 28%;
+  height: 100%;
+  background: radial-gradient(ellipse 100% 60% at 0% 50%,
+    rgba(160, 210, 130, 0.28) 0%,
+    rgba(190, 225, 160, 0.12) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Side gradient glows — right */
+.experiences-glow-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 28%;
+  height: 100%;
+  background: radial-gradient(ellipse 100% 60% at 100% 50%,
+    rgba(160, 210, 130, 0.28) 0%,
+    rgba(190, 225, 160, 0.12) 50%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.hero-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 7px 20px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  border: 1px solid rgba(58, 90, 64, 0.25);
+  background: rgba(255, 255, 255, 0.8);
+  color: #2a4a2a;
+}
+
+.section-title {
+  font-size: 34px;
+  font-weight: 700;
+  color: #1a321a;
+  letter-spacing: -0.3px;
+}
+
+@media (min-width: 640px) {
+  .section-title {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-title {
+    font-size: 46px;
+  }
+}
+
+.btn-cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 8px;
+  padding: 15px 38px;
+  border-radius: 9999px;
+  font-size: 15px;
+  font-weight: 600;
+  background: #3a5a40;
+  color: #ffffff;
+  box-shadow: 0 6px 18px -6px rgba(26, 50, 26, 0.4);
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn-cta:hover {
+  background: #2e4833;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px -6px rgba(26, 50, 26, 0.5);
+}
+
+.btn-cta:active {
+  transform: translateY(0);
+}
+
+.btn-cta-nav {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  padding: 10px 24px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #3a5a40;
+  color: #ffffff;
+  box-shadow: 0 4px 12px -4px rgba(26, 50, 26, 0.35);
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-cta-nav:hover {
+  background: #2e4833;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 16px -4px rgba(26, 50, 26, 0.4);
+}
+
+.btn-cta-sm {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 6px;
+  padding: 10px 22px;
+  border-radius: 9999px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #3a5a40;
+  color: #ffffff;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-cta-sm:hover {
+  background: #2e4833;
+  transform: translateY(-1px);
+}
+
+.card-shadow {
+  box-shadow: 0 4px 16px -6px rgba(26, 50, 26, 0.1);
+}
+
+.card-shadow-hover {
+  transition:
+    box-shadow 0.3s ease,
+    transform 0.3s ease;
+}
+
+.card-shadow-hover:hover {
+  box-shadow: 0 14px 32px -10px rgba(26, 50, 26, 0.22);
+  transform: translateY(-3px);
+}
+
+/* ── Navbar link with animated underline on hover ── */
+.nav-link {
+  position: relative;
+  font-size: 15px;
+  font-weight: 500;
+  color: #1a321a;
+  text-decoration: none;
+  padding-bottom: 2px;
+  transition: color 0.2s ease;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 0;
+  height: 1.5px;
+  background: #3A5A40;
+  border-radius: 9999px;
+  transition: width 0.25s ease;
+}
+
+.nav-link:hover {
+  color: #3A5A40;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}

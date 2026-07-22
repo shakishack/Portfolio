@@ -1,0 +1,8 @@
+{
+  "name": "webportofolio-shakila-root",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --prefix web-portofolio",
+    "build": "npm run build --prefix web-portofolio"
+  }
+}
