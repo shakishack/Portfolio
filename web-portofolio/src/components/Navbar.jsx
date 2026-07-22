@@ -20,7 +20,7 @@ export default function Navbar() {
           : "bg-[#DCEFDC]/85 backdrop-blur-sm shadow-[0_2px_14px_-4px_rgba(26,50,26,0.06)]"
       }`}
     >
-      <div className="max-w-7xl mx-auto px-8 lg:px-12 flex items-center justify-between h-[84px]">
+      <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 flex items-center justify-between h-[84px]">
         {/* Brand */}
         <a
           href="#home"
@@ -29,8 +29,8 @@ export default function Navbar() {
           {portfolioData.personal.shortName}
         </a>
 
-        {/* Desktop nav links */}
-        <nav className="hidden md:flex items-center gap-9 lg:gap-11">
+        {/* Desktop nav links (visible on lg: 1024px and up) */}
+        <nav className="hidden lg:flex items-center gap-9 lg:gap-11">
           {portfolioData.navLinks.map((link) => (
             <a
               key={link.name}
@@ -42,14 +42,14 @@ export default function Navbar() {
           ))}
         </nav>
 
-        {/* CTA button – desktop */}
-        <a href="#contacts" className="hidden md:inline-flex btn-cta-nav">
+        {/* CTA button – Desktop ONLY (lg: 1024px and up) */}
+        <a href="#contacts" className="hidden lg:inline-flex btn-cta-nav">
           Let's Connect!
         </a>
 
-        {/* Mobile hamburger */}
+        {/* Hamburger button – Mobile & Tablet (visible below lg) */}
         <button
-          className="md:hidden text-[#1a321a] p-1 cursor-pointer"
+          className="lg:hidden text-[#1a321a] p-1 cursor-pointer"
           onClick={() => setMobileOpen(!mobileOpen)}
           aria-label="Toggle menu"
           type="button"
@@ -58,9 +58,9 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile dropdown */}
+      {/* Mobile & Tablet dropdown menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t border-[#C2D9C2] px-8 py-5 space-y-4 shadow-md">
+        <div className="lg:hidden bg-white border-t border-[#C2D9C2] px-8 py-5 space-y-4 shadow-md">
           {portfolioData.navLinks.map((link) => (
             <a
               key={link.name}
@@ -71,7 +71,7 @@ export default function Navbar() {
               {link.name}
             </a>
           ))}
-          {/* Mobile CTA – block-level so width fills the container */}
+          {/* CTA Button placed inside mobile/tablet dropdown menu */}
           <a
             href="#contacts"
             onClick={() => setMobileOpen(false)}
