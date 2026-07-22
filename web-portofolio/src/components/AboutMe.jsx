@@ -12,16 +12,18 @@ export default function AboutMe() {
 
         <div className="flex flex-col md:flex-row gap-12 items-center md:items-start">
           <div className="flex-shrink-0 relative">
-            <div className="w-[230px] h-[250px] rounded-2xl overflow-hidden border-4 border-[#C8DCC8] shadow-md bg-[#E6F2E6]">
-              <img
-                src={personal.profileImage}
-                alt={personal.name}
-                className="w-full h-full object-cover object-top"
-                onError={(e) => {
-                  e.target.onerror = null;
-                  e.target.style.display = "none";
-                }}
-              />
+            <div className="w-[230px] h-[250px] sm:w-[240px] sm:h-[260px] rounded-[20px] border-4 border-[#C8DCC8] shadow-md bg-[#E6F2E6] p-3.5 flex items-center justify-center">
+              <div className="w-full h-full rounded-[14px] overflow-hidden">
+                <img
+                  src={personal.profileImage}
+                  alt={personal.name}
+                  className="w-full h-full object-cover object-center"
+                  onError={(e) => {
+                    e.target.onerror = null;
+                    e.target.style.display = "none";
+                  }}
+                />
+              </div>
             </div>
             <span className="absolute -left-4 -top-4 w-14 h-14 rounded-full bg-[#F5E97A] flex items-center justify-center shadow-md">
               <Star size={24} className="fill-[#1a321a] text-[#1a321a]" />
