@@ -39,18 +39,18 @@ export default function AboutMe() {
               {personal.bio}
             </p>
 
-            <span className="inline-flex flex-wrap items-center gap-2 text-[15px] text-[#1a321a] border border-[#3A5A40]/25 bg-[#F1F8ED] rounded-full px-6 py-3 font-normal">
+            <div className="inline-flex flex-wrap items-center justify-center sm:justify-start gap-x-1.5 sm:gap-x-2 gap-y-1 text-[13.5px] sm:text-[15px] text-[#1a321a] border border-[#3A5A40]/25 bg-[#F1F8ED] rounded-[18px] sm:rounded-full px-4 py-2.5 sm:px-6 sm:py-3 font-normal leading-snug">
               <span>{personal.opportunitiesPrefix}</span>
               {personal.opportunitiesRoles.map((role, idx) => (
                 <React.Fragment key={role}>
-                  <span className="font-bold text-[#3A5A40]">{role}</span>
+                  <span className="font-bold text-[#3A5A40] whitespace-nowrap">{role}</span>
                   {idx < personal.opportunitiesRoles.length - 1 && (
-                    <span>|</span>
+                    <span className="text-[#3A5A40]/40 font-light">|</span>
                   )}
                 </React.Fragment>
               ))}
               <span>{personal.opportunitiesSuffix}</span>
-            </span>
+            </div>
           </div>
         </div>
       </div>

@@ -259,7 +259,7 @@ export const portfolioData = {
         "Successfully completed 3 specialized courses: Build an AI Agent, Introduction to Large Language Models, and Code Troubleshooting with IBM Bob.",
       certificateUrl:
         "https://drive.google.com/drive/folders/1PXG2zmqnh5CqfijOynTxHB7ED2Jxo2q8?usp=sharing",
-      buttonLabel: "See Certificate",
+      buttonLabel: "View Certificate",
     },
     {
       id: 2,
@@ -268,7 +268,7 @@ export const portfolioData = {
         "Completed basic frontend web development training and coursework organized by KSM Android UPNVJ, achieving the Best Project award.",
       certificateUrl:
         "https://drive.google.com/file/d/1her1dhhdxeBZEwUDEySama7fQIJ0L7hj/view?usp=drive_link",
-      buttonLabel: "See Certificate",
+      buttonLabel: "View Certificate",
     },
   ],
   // Fallback for single achievement reference
@@ -278,6 +278,6 @@ export const portfolioData = {
       "Successfully completed 3 specialized courses: Build an AI Agent, Introduction to Large Language Models, and Code Troubleshooting with IBM Bob (Jul 2026).",
     certificateUrl:
       "https://drive.google.com/file/d/1PXG2zmqnh5CqfijOynTxHB7ED2Jxo2q8/view?usp=sharing",
-    buttonLabel: "See Certificate",
+    buttonLabel: "View Certificate",
   },
 };
