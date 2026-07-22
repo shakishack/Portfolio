@@ -35,27 +35,27 @@ export default function ProjectModal({ project, onClose }) {
           </button>
 
           <div className="flex flex-wrap gap-1.5 mb-3">
-            <span className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#3A5A40] text-white">
+            <span className="px-3 py-0.5 rounded-full text-[11.5px] font-bold bg-[#3A5A40] text-white">
               {project.category}
             </span>
             {project.tags.map((tag, idx) => (
               <span
                 key={idx}
-                className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-[#E6F2E6] text-[#2A4A2A]"
+                className="px-3 py-0.5 rounded-full text-[11.5px] font-semibold bg-[#E6F2E6] text-[#2A4A2A]"
               >
                 {tag}
               </span>
             ))}
           </div>
 
-          <h3 className="text-[19px] font-bold text-[#1a321a] mb-0.5">
+          <h3 className="text-[20px] font-bold text-[#1a321a] mb-0.5">
             {project.title}
           </h3>
-          <p className="text-[12.5px] font-semibold text-[#4A7050] mb-4">
+          <p className="text-[14px] font-semibold text-[#4A7050] mb-4">
             {project.subtitle}
           </p>
 
-          <p className="text-[12.5px] text-[#2A4A2A] leading-relaxed font-normal mb-6">
+          <p className="text-[14px] text-[#2A4A2A] leading-relaxed font-normal mb-6">
             {project.description}
           </p>
 
@@ -74,16 +74,16 @@ export default function ProjectModal({ project, onClose }) {
                     );
                   }
                 }}
-                className="inline-flex items-center gap-1.5 bg-[#3A5A40] hover:bg-[#2E4833] text-white text-[11.5px] font-semibold px-4 py-2 rounded-full cursor-pointer transition-all duration-200"
+                className="inline-flex items-center gap-1.5 bg-[#3A5A40] hover:bg-[#2E4833] text-white text-[13px] font-semibold px-4 py-2.5 rounded-full cursor-pointer transition-all duration-200"
               >
                 {btn.label}
-                <ExternalLink size={12} />
+                <ExternalLink size={14} />
               </a>
             ))}
 
             <button
               onClick={onClose}
-              className="ml-auto text-[11.5px] font-medium text-[#4A7050] hover:text-[#1a321a] cursor-pointer transition-colors"
+              className="ml-auto text-[13px] font-medium text-[#4A7050] hover:text-[#1a321a] cursor-pointer transition-colors"
             >
               Close
             </button>

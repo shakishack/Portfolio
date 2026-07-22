@@ -24,26 +24,26 @@ export default function Skills() {
           return (
             <div
               key={cat.id}
-              className="group card-shadow card-shadow-hover bg-white rounded-[16px] border border-[#C8DCC8] p-6 flex flex-col gap-3.5 text-left transition-all duration-300"
+              className="group card-shadow card-shadow-hover bg-white rounded-[16px] border border-[#C8DCC8] p-6 flex flex-col gap-4 text-left transition-all duration-300"
             >
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 flex items-center justify-center text-[#3A5A40] group-hover:text-[#38A169] group-hover:drop-shadow-[0_0_10px_rgba(56,161,105,0.6)] group-hover:scale-110 transition-all duration-300 flex-shrink-0">
-                  <Icon size={21} />
+                  <Icon size={24} />
                 </div>
-                <h3 className="text-[15px] font-bold text-[#1a321a] group-hover:text-[#2F6038] transition-colors duration-300 leading-tight">
+                <h3 className="text-[16.5px] sm:text-[17.5px] font-bold text-[#1a321a] group-hover:text-[#2F6038] transition-colors duration-300 leading-tight">
                   {cat.title}
                 </h3>
               </div>
 
-              <p className="text-[12.5px] text-[#4A7050] leading-relaxed font-normal">
+              <p className="text-[14px] text-[#4A7050] leading-relaxed font-normal">
                 {cat.description}
               </p>
 
-              <div className="flex flex-wrap gap-1.5">
+              <div className="flex flex-wrap gap-2">
                 {cat.skills.map((skill, idx) => (
                   <span
                     key={idx}
-                    className="px-3 py-[4px] rounded-full text-[11px] font-semibold bg-[#E6F2E6] text-[#2A4A2A] group-hover:bg-[#DCF0DC] transition-colors duration-300"
+                    className="px-3.5 py-[5px] rounded-full text-[12.5px] font-semibold bg-[#E6F2E6] text-[#2A4A2A] group-hover:bg-[#DCF0DC] transition-colors duration-300"
                   >
                     {skill}
                   </span>

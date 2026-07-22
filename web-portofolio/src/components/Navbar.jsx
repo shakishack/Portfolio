@@ -24,7 +24,7 @@ export default function Navbar() {
         {/* Brand */}
         <a
           href="#home"
-          className="text-[20px] font-extrabold tracking-[0.08em] text-[#1a321a] hover:opacity-70 transition-opacity"
+          className="text-[21px] sm:text-[22px] font-extrabold tracking-[0.08em] text-[#1a321a] hover:opacity-70 transition-opacity"
         >
           {portfolioData.personal.shortName}
         </a>
@@ -66,7 +66,7 @@ export default function Navbar() {
               key={link.name}
               href={link.href}
               onClick={() => setMobileOpen(false)}
-              className="block text-[15px] font-medium text-[#1a321a] py-1.5 hover:text-[#3A5A40]"
+              className="block text-[16.5px] font-medium text-[#1a321a] py-1.5 hover:text-[#3A5A40]"
             >
               {link.name}
             </a>
@@ -75,7 +75,7 @@ export default function Navbar() {
           <a
             href="#contacts"
             onClick={() => setMobileOpen(false)}
-            className="block text-center py-[10px] px-6 rounded-full text-[13px] font-semibold bg-[#3A5A40] text-white hover:bg-[#2e4833] transition-colors mt-3"
+            className="block text-center py-[11px] px-6 rounded-full text-[14px] font-semibold bg-[#3A5A40] text-white hover:bg-[#2e4833] transition-colors mt-3"
           >
             Let's Connect!
           </a>

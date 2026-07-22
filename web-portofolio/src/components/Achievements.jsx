@@ -15,7 +15,7 @@ export default function Achievements() {
 
   return (
     <div className="max-w-5xl mx-auto">
-      <h2 className="text-[26px] sm:text-[28px] font-bold text-[#1a321a] mb-7">
+      <h2 className="text-[28px] sm:text-[32px] font-bold text-[#1a321a] mb-7">
         Achievements
       </h2>
 
@@ -24,15 +24,15 @@ export default function Achievements() {
 
           {/* Icon badge */}
           <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#3A5A40] flex items-center justify-center shadow-sm">
-            <Star size={19} className="fill-white text-white" />
+            <Star size={21} className="fill-white text-white" />
           </div>
 
           {/* Text */}
           <div className="flex-1 text-left min-w-0">
-            <h3 className="text-[14.5px] font-bold text-[#1a321a] mb-1 leading-snug">
+            <h3 className="text-[16.5px] font-bold text-[#1a321a] mb-1 leading-snug">
               {achievement.title}
             </h3>
-            <p className="text-[12.5px] text-[#2A4A2A] leading-relaxed font-normal">
+            <p className="text-[14px] text-[#2A4A2A] leading-relaxed font-normal">
               {achievement.description}
             </p>
           </div>
