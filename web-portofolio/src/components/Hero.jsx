@@ -24,12 +24,25 @@ export default function Hero() {
         </div>
 
         <p className="text-[16px] sm:text-[17px] text-[#2A4A2A] max-w-xl mx-auto leading-relaxed mb-10 font-normal">
-          {personal.tagline.map((line, idx) => (
-            <span key={idx}>
-              {line}
-              {idx < personal.tagline.length - 1 && <br />}
-            </span>
-          ))}
+          {personal.tagline.map((line, idx) => {
+            if (line.includes(personal.name)) {
+              const parts = line.split(personal.name);
+              return (
+                <span key={idx}>
+                  {parts[0]}
+                  <span className="font-bold text-[#1a321a]">{personal.name}</span>
+                  {parts[1]}
+                  {idx < personal.tagline.length - 1 && <br />}
+                </span>
+              );
+            }
+            return (
+              <span key={idx}>
+                {line}
+                {idx < personal.tagline.length - 1 && <br />}
+              </span>
+            );
+          })}
         </p>
 
         <a href="#projects" className="btn-cta">
