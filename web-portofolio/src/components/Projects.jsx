@@ -40,7 +40,8 @@ export default function Projects({ onSelectProject }) {
               className="card-shadow card-shadow-hover bg-white rounded-[16px] border border-[#C8DCC8] overflow-hidden flex flex-col group"
             >
               <div className="relative w-full h-[190px] bg-[#D4E8D4] overflow-hidden flex-shrink-0">
-                <span className="absolute left-3 top-3 z-10 bg-[#3A5A40] text-white text-[12px] font-bold px-3.5 py-1 rounded-full shadow">
+                {/* Category Chip Badge: centered text + interactive white hover */}
+                <span className="absolute left-3.5 top-3.5 z-10 inline-flex items-center justify-center h-[26px] px-3.5 rounded-full text-[12px] font-bold leading-none bg-[#3A5A40] text-white hover:bg-white hover:text-[#3A5A40] border border-transparent hover:border-[#3A5A40]/30 shadow-sm transition-all duration-300 cursor-pointer">
                   {project.category}
                 </span>
                 <img
