@@ -27,7 +27,7 @@ export default function Skills() {
               className="group card-shadow card-shadow-hover bg-white rounded-[16px] border border-[#C8DCC8] p-6 flex flex-col gap-4 text-left transition-all duration-300"
             >
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 flex items-center justify-center text-[#3A5A40] group-hover:text-[#38A169] group-hover:drop-shadow-[0_0_10px_rgba(56,161,105,0.6)] group-hover:scale-110 transition-all duration-300 flex-shrink-0">
+                <div className="w-10 h-10 flex items-center justify-center text-[#3A5A40] group-hover:text-[#38A169] group-hover:drop-shadow-[0_0_8px_rgba(56,161,105,0.5)] group-hover:scale-105 transition-all duration-300 flex-shrink-0">
                   <Icon size={24} />
                 </div>
                 <h3 className="text-[16.5px] sm:text-[17.5px] font-bold text-[#1a321a] group-hover:text-[#2F6038] transition-colors duration-300 leading-tight">

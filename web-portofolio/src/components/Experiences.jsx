@@ -20,8 +20,8 @@ export default function Experiences() {
         <div className="timeline-wrap pl-7 space-y-2.5">
           {portfolioData.experiences.map((exp) => (
             <div key={exp.id} className="relative text-left group">
-              {/* Timeline dot — turns to bright light green with glow & scale on hover */}
-              <div className="absolute -left-7 top-[24px] w-[15px] h-[15px] rounded-full border-2 border-white z-10 shadow-sm bg-[#4A7A50] group-hover:bg-[#52C46C] group-hover:scale-125 group-hover:shadow-[0_0_12px_rgba(82,196,108,0.8)] transition-all duration-300" />
+              {/* Timeline dot — turns to bright light green with subtle glow & scale on hover */}
+              <div className="absolute -left-7 top-[24px] w-[15px] h-[15px] rounded-full border-2 border-white z-10 shadow-sm bg-[#4A7A50] group-hover:bg-[#52C46C] group-hover:scale-110 group-hover:shadow-[0_0_10px_rgba(82,196,108,0.7)] transition-all duration-300" />
 
               {/* Row — no card by default, white card on hover */}
               <div className="rounded-[14px] px-6 py-5 border border-transparent transition-all duration-300 group-hover:bg-white/80 group-hover:border-white group-hover:shadow-[0_4px_24px_-6px_rgba(26,50,26,0.12)] backdrop-blur-sm">

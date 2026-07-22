@@ -23,15 +23,17 @@ function App() {
         <Experiences />
         <Projects onSelectProject={(p) => setSelectedProject(p)} />
 
-        {/* Gradient transition: Projects (white) → Skills (section-tint) */}
-        <div className="section-bridge-top" aria-hidden="true" />
+        {/* Skills & Achievements – background & glow style matched to Experiences */}
+        <section id="skills" className="experiences-section pt-16 pb-24 lg:pt-20 lg:pb-32 px-6 relative overflow-hidden">
+          {/* Left side gradient glow */}
+          <div className="experiences-glow-left" aria-hidden="true" />
+          {/* Right side gradient glow */}
+          <div className="experiences-glow-right" aria-hidden="true" />
 
-        {/* Skills & Achievements – satu section, satu background */}
-        <section id="skills" className="pt-16 lg:pt-20 pb-24 lg:pb-32 px-6 section-tint">
-          <div className="max-w-5xl mx-auto">
+          <div className="max-w-5xl mx-auto relative z-10">
             <Skills />
             {/* Divider spacing before Achievements */}
-            <div className="mt-20">
+            <div className="mt-16 sm:mt-20">
               <Achievements />
             </div>
           </div>

@@ -26,7 +26,7 @@ export default function AboutMe() {
               </div>
             </div>
             <span className="absolute -left-4 -top-4 w-14 h-14 rounded-full bg-[#F5E97A] flex items-center justify-center shadow-md">
-              <Star size={24} className="fill-[#1a321a] text-[#1a321a]" />
+              <Star size={24} className="fill-[#B8860B] text-[#B8860B]" />
             </span>
           </div>
 

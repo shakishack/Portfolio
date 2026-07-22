@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ArrowRight } from "lucide-react";
 import { portfolioData } from "../data/portfolioData";
 
 export default function Projects({ onSelectProject }) {
@@ -17,6 +18,7 @@ export default function Projects({ onSelectProject }) {
       <div className="max-w-6xl mx-auto">
         <h2 className="section-title text-center mb-10">Featured Projects</h2>
 
+        {/* Category filter buttons */}
         <div className="flex justify-center items-center gap-3 mb-12">
           {portfolioData.projectCategories.map((cat) => (
             <button
@@ -33,15 +35,18 @@ export default function Projects({ onSelectProject }) {
           ))}
         </div>
 
+        {/* Project Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-7 items-stretch">
           {filtered.map((project) => (
             <div
               key={project.id}
-              className="card-shadow card-shadow-hover bg-white rounded-[16px] border border-[#C8DCC8] overflow-hidden flex flex-col group"
+              onClick={() => onSelectProject(project)}
+              className="card-shadow card-shadow-hover bg-white rounded-[16px] border border-[#C8DCC8] overflow-hidden flex flex-col group cursor-pointer transition-all duration-300"
             >
-              <div className="relative w-full h-[190px] bg-[#D4E8D4] overflow-hidden flex-shrink-0">
-                {/* Category Chip Badge: centered text */}
-                <span className="absolute left-3.5 top-3.5 z-10 inline-flex items-center justify-center h-[26px] px-3.5 rounded-full text-[12px] font-bold leading-none bg-[#3A5A40] text-white shadow-sm">
+              {/* Project Image Container */}
+              <div className="relative w-full h-[195px] bg-[#D4E8D4] overflow-hidden flex-shrink-0">
+                {/* Category Chip Badge */}
+                <span className="absolute left-3.5 top-3.5 z-10 inline-flex items-center justify-center h-[26px] px-3.5 rounded-full text-[12px] font-bold leading-none bg-[#3A5A40] text-white shadow-[0_4px_12px_rgba(0,0,0,0.28)] border border-white/20">
                   {project.category}
                 </span>
                 <img
@@ -55,8 +60,9 @@ export default function Projects({ onSelectProject }) {
                 />
               </div>
 
+              {/* Card Body */}
               <div className="p-6 flex flex-col flex-1 text-left">
-                <h3 className="text-[18px] font-bold text-[#1a321a] leading-tight mb-1">
+                <h3 className="text-[18px] font-bold text-[#1a321a] leading-tight mb-1 group-hover:text-[#2E6B38] transition-colors">
                   {project.title}
                 </h3>
 
@@ -64,7 +70,8 @@ export default function Projects({ onSelectProject }) {
                   {project.subtitle}
                 </p>
 
-                <div className="flex flex-wrap gap-1.5 mb-3.5">
+                {/* Tech Tags */}
+                <div className="flex flex-wrap gap-1.5 mb-4">
                   {project.tags.map((tag, idx) => (
                     <span
                       key={idx}
@@ -75,24 +82,22 @@ export default function Projects({ onSelectProject }) {
                   ))}
                 </div>
 
-                <p className="text-[14px] text-[#2A4A2A] leading-relaxed font-normal flex-1 mb-5">
-                  {project.description}
-                </p>
-
-                <div className="flex items-center gap-2.5 mt-auto">
-                  {project.buttons.map((btn, idx) => (
-                    <button
-                      key={idx}
-                      onClick={() => onSelectProject(project)}
-                      className={`flex-1 py-[10px] px-3.5 rounded-full text-[13.5px] font-semibold cursor-pointer transition-all duration-200 text-center ${
-                        btn.primary
-                          ? "bg-[#3A5A40] hover:bg-[#2E4833] text-white shadow-sm hover:shadow-md"
-                          : "bg-[#E6F2E6] hover:bg-[#D0E8D0] text-[#1a321a] border border-[#C0D8C0]"
-                      }`}
-                    >
-                      {btn.label}
-                    </button>
-                  ))}
+                {/* Bottom Row: See Details text & Arrow Button */}
+                <div className="flex items-center justify-between mt-auto pt-3 border-t border-[#E0EEE0]">
+                  <span className="text-[13px] font-semibold text-[#3A5A40] group-hover:text-[#2E4833] transition-colors">
+                    See Details
+                  </span>
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      onSelectProject(project);
+                    }}
+                    className="w-9 h-9 rounded-full bg-[#3A5A40] text-white flex items-center justify-center group-hover:bg-[#2E4833] group-hover:scale-105 shadow-sm transition-all duration-200 cursor-pointer"
+                    aria-label="See Project Details"
+                  >
+                    <ArrowRight size={17} />
+                  </button>
                 </div>
               </div>
             </div>

@@ -44,7 +44,12 @@ export default function Navbar() {
         </nav>
 
         {/* CTA button – Desktop ONLY (lg: 1024px and up) */}
-        <a href="#contacts" className="hidden lg:inline-flex btn-cta-nav">
+        <a
+          href={portfolioData.personal.whatsappUrl || "https://wa.me/6287839076250"}
+          target="_blank"
+          rel="noreferrer"
+          className="hidden lg:inline-flex btn-cta-nav"
+        >
           Let's Connect!
         </a>
 
@@ -74,7 +79,9 @@ export default function Navbar() {
           ))}
           {/* CTA Button placed inside mobile/tablet dropdown menu */}
           <a
-            href="#contacts"
+            href={portfolioData.personal.whatsappUrl || "https://wa.me/6287839076250"}
+            target="_blank"
+            rel="noreferrer"
             onClick={() => setMobileOpen(false)}
             className="block text-center py-[11px] px-6 rounded-full text-[14px] font-semibold bg-[#3A5A40] text-white hover:bg-[#2e4833] transition-colors mt-3"
           >
