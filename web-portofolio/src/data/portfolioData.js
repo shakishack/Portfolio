@@ -16,7 +16,7 @@ export const portfolioData = {
     email: "shakila.ardelina@gmail.com",
     whatsappUrl: "https://wa.me/6287839076250",
     cvUrl:
-      "https://drive.google.com/file/d/12A5bzCXUoTQqV4k-3rX_o89Ycz16t5uK/view?usp=drive_link",
+      "https://drive.google.com/file/d/125kLOxp1kAJSt8T4_kAIUFZb9OjVBSxS/view?usp=drive_link",
     portfolioPdfUrl:
       "https://drive.google.com/file/d/1-hlHWSNS3qi46AMnGAyWJXgABe_gZii1/view?usp=sharing",
     githubUrl: "https://github.com/shakishack",
