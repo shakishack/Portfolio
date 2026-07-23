@@ -24,16 +24,16 @@ export default function Achievements() {
         {achievementsList.map((item) => (
           <div
             key={item.id || item.title}
-            className="group card-shadow card-shadow-hover bg-white rounded-[16px] border border-[#C8DCC8] px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 transition-all duration-300"
+            className="group card-shadow card-shadow-hover bg-white rounded-[16px] border border-[#C8DCC8] px-6 py-5 flex flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-5 transition-all duration-300 scroll-interactive achievement-card"
           >
-            {/* Icon badge — transitions to lighter green frame with subtle glow & 5% scale on hover */}
-            <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#3A5A40] group-hover:bg-[#52C46C] group-hover:scale-105 group-hover:shadow-[0_0_10px_rgba(82,196,108,0.6)] flex items-center justify-center shadow-sm transition-all duration-300">
+            {/* Icon badge — transitions to lighter green frame with subtle glow & 5% scale on hover / scroll active */}
+            <div className="achievement-star-badge flex-shrink-0 w-12 h-12 rounded-full bg-[#3A5A40] group-hover:bg-[#52C46C] group-hover:scale-105 group-hover:shadow-[0_0_10px_rgba(82,196,108,0.6)] flex items-center justify-center shadow-sm transition-all duration-300">
               <Star size={21} className="fill-white text-white" />
             </div>
 
             {/* Text */}
             <div className="flex-1 text-left min-w-0">
-              <h3 className="text-[16.5px] font-bold text-[#1a321a] group-hover:text-[#2E6B38] transition-colors duration-300 mb-1 leading-snug">
+              <h3 className="achievement-title text-[16.5px] font-bold text-[#1a321a] group-hover:text-[#2E6B38] transition-colors duration-300 mb-1 leading-snug">
                 {item.title}
               </h3>
               <p className="text-[14px] text-[#2A4A2A] leading-relaxed font-normal">

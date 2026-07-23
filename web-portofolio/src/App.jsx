@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './index.css';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
@@ -12,6 +12,43 @@ import ProjectModal from './components/ProjectModal';
 
 function App() {
   const [selectedProject, setSelectedProject] = useState(null);
+
+  useEffect(() => {
+    let observer;
+
+    const initScrollObserver = () => {
+      if (observer) observer.disconnect();
+      if (window.innerWidth >= 1024) return;
+
+      observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("is-scroll-active");
+            } else {
+              entry.target.classList.remove("is-scroll-active");
+            }
+          });
+        },
+        {
+          rootMargin: "-22% 0px -22% 0px",
+          threshold: 0.15,
+        }
+      );
+
+      const targets = document.querySelectorAll(".scroll-interactive");
+      targets.forEach((t) => observer.observe(t));
+    };
+
+    const timer = setTimeout(initScrollObserver, 200);
+    window.addEventListener("resize", initScrollObserver);
+
+    return () => {
+      clearTimeout(timer);
+      if (observer) observer.disconnect();
+      window.removeEventListener("resize", initScrollObserver);
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#EFF8EF] text-[#1a321a]">

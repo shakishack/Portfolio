@@ -41,7 +41,7 @@ export default function Projects({ onSelectProject }) {
             <div
               key={project.id}
               onClick={() => onSelectProject(project)}
-              className="card-shadow card-shadow-hover bg-white rounded-[16px] border border-[#C8DCC8] overflow-hidden flex flex-col group cursor-pointer transition-all duration-300"
+              className="card-shadow card-shadow-hover bg-white rounded-[16px] border border-[#C8DCC8] overflow-hidden flex flex-col group cursor-pointer transition-all duration-300 scroll-interactive project-card"
             >
               {/* Project Image Container */}
               <div className="relative w-full h-[195px] bg-[#D4E8D4] overflow-hidden flex-shrink-0">
@@ -52,7 +52,7 @@ export default function Projects({ onSelectProject }) {
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-500"
+                  className="project-img w-full h-full object-cover group-hover:scale-[1.05] transition-transform duration-500"
                   onError={(e) => {
                     e.target.onerror = null;
                     e.target.style.display = "none";
@@ -62,7 +62,7 @@ export default function Projects({ onSelectProject }) {
 
               {/* Card Body */}
               <div className="p-6 flex flex-col flex-1 text-left">
-                <h3 className="text-[18px] font-bold text-[#1a321a] leading-tight mb-1 group-hover:text-[#2E6B38] transition-colors">
+                <h3 className="project-title text-[18px] font-bold text-[#1a321a] leading-tight mb-1 group-hover:text-[#2E6B38] transition-colors">
                   {project.title}
                 </h3>
 
@@ -84,7 +84,7 @@ export default function Projects({ onSelectProject }) {
 
                 {/* Bottom Row: See Details text & Arrow Button */}
                 <div className="flex items-center justify-between mt-auto pt-3 border-t border-[#E0EEE0]">
-                  <span className="text-[13px] font-semibold text-[#3A5A40] group-hover:text-[#2E4833] transition-colors">
+                  <span className="project-details-text text-[13px] font-semibold text-[#3A5A40] group-hover:text-[#2E4833] transition-colors">
                     See Details
                   </span>
                   <button
@@ -93,7 +93,7 @@ export default function Projects({ onSelectProject }) {
                       e.stopPropagation();
                       onSelectProject(project);
                     }}
-                    className="w-9 h-9 rounded-full bg-[#3A5A40] text-white flex items-center justify-center group-hover:bg-[#2E4833] group-hover:scale-105 shadow-sm transition-all duration-200 cursor-pointer"
+                    className="project-btn w-9 h-9 rounded-full bg-[#3A5A40] text-white flex items-center justify-center group-hover:bg-[#2E4833] group-hover:scale-105 shadow-sm transition-all duration-200 cursor-pointer"
                     aria-label="See Project Details"
                   >
                     <ArrowRight size={17} />

@@ -5,9 +5,23 @@ import { portfolioData } from "../data/portfolioData";
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("home");
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 8);
+    const onScroll = () => {
+      setScrolled(window.scrollY > 8);
+
+      const sectionIds = portfolioData.navLinks.map((l) => l.href.replace("#", ""));
+      const scrollPosition = window.scrollY + 180;
+
+      for (let i = sectionIds.length - 1; i >= 0; i--) {
+        const el = document.getElementById(sectionIds[i]);
+        if (el && el.offsetTop <= scrollPosition) {
+          setActiveSection(sectionIds[i]);
+          break;
+        }
+      }
+    };
     window.addEventListener("scroll", onScroll);
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -32,15 +46,18 @@ export default function Navbar() {
 
         {/* Desktop nav links (visible on lg: 1024px and up) */}
         <nav className="hidden lg:flex items-center gap-9 lg:gap-11">
-          {portfolioData.navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              className="nav-link"
-            >
-              {link.name}
-            </a>
-          ))}
+          {portfolioData.navLinks.map((link) => {
+            const isLinkActive = activeSection === link.href.replace("#", "");
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                className={`nav-link ${isLinkActive ? "active" : ""}`}
+              >
+                {link.name}
+              </a>
+            );
+          })}
         </nav>
 
         {/* CTA button – Desktop ONLY (lg: 1024px and up) */}
@@ -67,16 +84,23 @@ export default function Navbar() {
       {/* Mobile & Tablet dropdown menu */}
       {mobileOpen && (
         <div className="lg:hidden bg-white border-t border-[#C2D9C2] px-8 py-5 space-y-4 shadow-md">
-          {portfolioData.navLinks.map((link) => (
-            <a
-              key={link.name}
-              href={link.href}
-              onClick={() => setMobileOpen(false)}
-              className="block text-[16.5px] font-medium text-[#1a321a] py-1.5 hover:text-[#3A5A40]"
-            >
-              {link.name}
-            </a>
-          ))}
+          {portfolioData.navLinks.map((link) => {
+            const isLinkActive = activeSection === link.href.replace("#", "");
+            return (
+              <a
+                key={link.name}
+                href={link.href}
+                onClick={() => setMobileOpen(false)}
+                className={`block text-[16.5px] py-1.5 transition-colors ${
+                  isLinkActive
+                    ? "text-[#3A5A40] font-bold"
+                    : "text-[#1a321a] font-medium hover:text-[#3A5A40]"
+                }`}
+              >
+                {link.name}
+              </a>
+            );
+          })}
           {/* CTA Button placed inside mobile/tablet dropdown menu */}
           <a
             href={portfolioData.personal.whatsappUrl || "https://wa.me/6287839076250"}

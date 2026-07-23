@@ -288,11 +288,88 @@ section[id] {
   transition: transform 0.25s ease;
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link.active {
   color: #3A5A40;
   font-weight: 700;
 }
 
-.nav-link:hover::after {
+.nav-link:hover::after,
+.nav-link.active::after {
   transform: scaleX(1);
+}
+
+/* ── Mobile/Tablet Scroll Active Interactive Animations ── */
+@media (max-width: 1023px) {
+  /* Experiences section card & dot activation on scroll */
+  .exp-row.is-scroll-active .exp-card {
+    background-color: rgba(255, 255, 255, 0.8) !important;
+    border-color: #ffffff !important;
+    box-shadow: 0 4px 24px -6px rgba(26, 50, 26, 0.12) !important;
+  }
+
+  .exp-row.is-scroll-active .exp-dot {
+    background-color: #52c46c !important;
+    transform: scale(1.1) !important;
+    box-shadow: 0 0 10px rgba(82, 196, 108, 0.7) !important;
+  }
+
+  .exp-row.is-scroll-active .exp-title {
+    color: #2e6b38 !important;
+  }
+
+  /* Featured Projects card activation on scroll */
+  .project-card.is-scroll-active {
+    box-shadow: 0 14px 32px -10px rgba(26, 50, 26, 0.22) !important;
+    transform: translateY(-3px) !important;
+  }
+
+  .project-card.is-scroll-active .project-img {
+    transform: scale(1.05) !important;
+  }
+
+  .project-card.is-scroll-active .project-title {
+    color: #2e6b38 !important;
+  }
+
+  .project-card.is-scroll-active .project-btn {
+    background-color: #2e4833 !important;
+    transform: scale(1.05) !important;
+  }
+
+  .project-card.is-scroll-active .project-details-text {
+    color: #2e4833 !important;
+  }
+
+  /* Skills card activation on scroll */
+  .skill-card.is-scroll-active {
+    box-shadow: 0 14px 32px -10px rgba(26, 50, 26, 0.22) !important;
+    transform: translateY(-3px) !important;
+  }
+
+  .skill-card.is-scroll-active .skill-icon {
+    color: #38a169 !important;
+    filter: drop-shadow(0 0 8px rgba(56, 161, 105, 0.5)) !important;
+    transform: scale(1.05) !important;
+  }
+
+  .skill-card.is-scroll-active .skill-title {
+    color: #2f6038 !important;
+  }
+
+  /* Achievements card activation on scroll */
+  .achievement-card.is-scroll-active {
+    box-shadow: 0 14px 32px -10px rgba(26, 50, 26, 0.22) !important;
+    transform: translateY(-3px) !important;
+  }
+
+  .achievement-card.is-scroll-active .achievement-star-badge {
+    background-color: #52c46c !important;
+    transform: scale(1.05) !important;
+    box-shadow: 0 0 10px rgba(82, 196, 108, 0.6) !important;
+  }
+
+  .achievement-card.is-scroll-active .achievement-title {
+    color: #2e6b38 !important;
+  }
 }
