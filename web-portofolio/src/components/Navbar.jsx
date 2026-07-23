@@ -46,18 +46,15 @@ export default function Navbar() {
 
         {/* Desktop nav links (visible on lg: 1024px and up) */}
         <nav className="hidden lg:flex items-center gap-9 lg:gap-11">
-          {portfolioData.navLinks.map((link) => {
-            const isLinkActive = activeSection === link.href.replace("#", "");
-            return (
-              <a
-                key={link.name}
-                href={link.href}
-                className={`nav-link ${isLinkActive ? "active" : ""}`}
-              >
-                {link.name}
-              </a>
-            );
-          })}
+          {portfolioData.navLinks.map((link) => (
+            <a
+              key={link.name}
+              href={link.href}
+              className="nav-link"
+            >
+              {link.name}
+            </a>
+          ))}
         </nav>
 
         {/* CTA button – Desktop ONLY (lg: 1024px and up) */}
