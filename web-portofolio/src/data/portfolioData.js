@@ -6,7 +6,7 @@ export const portfolioData = {
     subTagline:
       "Focused on building responsive and visually appealing web applications from end to end.",
     profileImage: "/img/my-pfp.png",
-    bio: '5th Semester Information Systems student at UPN "Veteran" Jakarta with 3.92/4.00 GPA. Focused on building responsive and visually appealing web applications from end to end. As a highly enthusiastic and creative individual with advanced skills in UI/UX Design and Frontend Development, I use Figma to make attractive interfaces and bring them to life using TypeScript, JavaScript, HTML5, and CSS3. Beyond the frontend, I code and integrate APIs for seamless backend communication. I am deeply passionate about communicating my creative vision and delivering functional digital products that truly prioritize user needs.',
+    bio: '5th semester Information Systems student at UPN "Veteran" Jakarta with 3.92/4.00 GPA. Focused on building responsive and visually appealing web applications from end to end. As a highly enthusiastic and creative individual with advanced skills in UI/UX Design and Frontend Development, I use Figma to make attractive interfaces and bring them to life using TypeScript, JavaScript, HTML5, and CSS3. Beyond the frontend, I code and integrate APIs for seamless backend communication. I am deeply passionate about communicating my creative vision and delivering functional digital products that truly prioritize user needs.',
     opportunitiesPrefix: "Open to",
     opportunitiesRoles: ["UI/UX Design", "Frontend", "Software Development"],
     opportunitiesSuffix: "Opportunities",
