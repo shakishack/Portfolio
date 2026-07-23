@@ -14,6 +14,7 @@ export const portfolioData = {
       "My name is Shakila Ardelina. Tech enthusiast with a passion for UI/UX Design and Frontend Development. Come get to know more about me and my work ;)",
     ],
     email: "shakila.ardelina@gmail.com",
+    location: "Tangerang, Indonesia",
     whatsappUrl: "https://wa.me/6287839076250",
     cvUrl:
       "https://drive.google.com/file/d/125kLOxp1kAJSt8T4_kAIUFZb9OjVBSxS/view?usp=drive_link",

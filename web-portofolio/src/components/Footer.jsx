@@ -147,7 +147,7 @@ export default function Footer() {
           href={`mailto:${personal.email}`}
           className="text-[13.5px] text-[#8FB88F] hover:text-white transition-colors"
         >
-          {personal.email}
+          {personal.location ? `${personal.location} | ` : ""}{personal.email}
         </a>
       </div>
     </footer>
