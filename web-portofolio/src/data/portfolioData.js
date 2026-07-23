@@ -243,7 +243,7 @@ export const portfolioData = {
       skills: [
         "Git",
         "Github",
-        "VSCode",
+        "VS Code",
         "Postman",
         "Figma",
         "Canva",
